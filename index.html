@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reliant Recycling | Louisiana's Waterfront Industrial Scrap Partner Since 2009</title>
+<meta name="description" content="Barge dismantling, ship breaking, oilfield rig decommissioning, and industrial scrap recycling from three waterfront facilities in Houma, New Orleans, and Dulac, Louisiana. 2025 GBRIA Safety Excellence Award recipient.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0B1420',
+          steel: '#152332',
+          steel2: '#1D2E40',
+          rust: '#C1502E',
+          rustdark: '#9C3E22',
+          safety: '#E8B62C',
+          water: '#3C7A89',
+          fog: '#EDEAE2',
+          concrete: '#8A93A0',
+        },
+        fontFamily: {
+          display: ['Oswald', 'sans-serif'],
+          body: ['"Source Sans 3"', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'monospace'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #0B1420; }
+  .eyebrow { letter-spacing: 0.18em; }
+  .rust-underline { position: relative; }
+  .rust-underline::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -10px;
+    width: 56px; height: 3px;
+    background: #C1502E;
+  }
+  .ticker-track {
+    display: flex;
+    width: max-content;
+    animation: ticker 42s linear infinite;
+  }
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ticker-track { animation: none; }
+  }
+  .service-card { position: relative; overflow: hidden; }
+  .service-card img { transition: transform 0.6s ease; }
+  .service-card:hover img { transform: scale(1.06); }
+  .service-card::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(11,20,32,0.92) 0%, rgba(11,20,32,0.45) 55%, rgba(11,20,32,0.15) 100%);
+  }
+  .timeline-line {
+    background: linear-gradient(to bottom, transparent, #C1502E 8%, #C1502E 92%, transparent);
+  }
+  .focus-visible-ring:focus-visible {
+    outline: 2px solid #E8B62C;
+    outline-offset: 3px;
+  }
+  ::selection { background: #C1502E; color: #EDEAE2; }
+</style>
+</head>
+<body class="bg-ink text-fog font-body antialiased">
+
+<!-- ============ NAV ============ -->
+<header class="fixed top-0 inset-x-0 z-50 bg-ink/90 backdrop-blur border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-between">
+    <a href="#top" class="flex flex-col leading-none focus-visible-ring">
+      <span class="font-display font-semibold text-xl md:text-2xl tracking-wide">
+        <span class="text-rust">RELIANT</span> <span class="text-fog">RECYCLING</span>
+      </span>
+      <span class="font-mono text-[10px] md:text-xs text-concrete tracking-[0.2em] mt-0.5">LOUISIANA &middot; EST. 2009</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 font-body text-sm text-concrete">
+      <a href="#services" class="hover:text-fog transition focus-visible-ring">Services</a>
+      <a href="#way" class="hover:text-fog transition focus-visible-ring">The Reliant Way</a>
+      <a href="#history" class="hover:text-fog transition focus-visible-ring">Track Record</a>
+      <a href="#locations" class="hover:text-fog transition focus-visible-ring">Locations</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="tel:+19858512225" class="hidden sm:block font-mono text-sm text-fog hover:text-safety transition focus-visible-ring">(985) 851-2225</a>
+      <a href="#quote" class="bg-rust hover:bg-rustdark transition text-fog font-body font-semibold text-sm px-4 md:px-5 py-2.5 rounded-sm focus-visible-ring">
+        Request a Quote
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="relative min-h-[92vh] flex items-end pt-24">
+  <div class="absolute inset-0">
+    <img src="https://www.reliantrecycling.com/hs-fs/hubfs/2025%20Barge%20Pic.jpeg?width=1900&name=2025%20Barge%20Pic.jpeg"
+         alt="Barge dismantling operation at a Reliant Recycling waterfront yard"
+         class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/20 to-transparent"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-5 md:px-8 pb-16 md:pb-24 w-full">
+    <p class="eyebrow font-mono text-safety text-xs md:text-sm mb-5">WATERFRONT INDUSTRIAL RECYCLING &middot; GULF COAST</p>
+    <h1 class="font-display font-semibold text-4xl sm:text-5xl md:text-7xl leading-[1.03] max-w-4xl">
+      Reliable scrap solutions,<br class="hidden md:block"> since 2009.
+    </h1>
+    <p class="mt-6 text-base md:text-lg text-fog/90 max-w-xl">
+      Barge dismantling, ship breaking, and oilfield rig decommissioning from three waterfront facilities in Houma, New Orleans, and Dulac. Locally owned. Working exclusively with industrial accounts.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href="#quote" class="bg-rust hover:bg-rustdark transition font-body font-semibold px-7 py-3.5 rounded-sm focus-visible-ring">
+        Request a Quote
+      </a>
+      <a href="tel:+19858512225" class="border border-fog/30 hover:border-safety hover:text-safety transition font-body font-semibold px-7 py-3.5 rounded-sm focus-visible-ring">
+        Call (985) 851-2225
+      </a>
+    </div>
+
+    <!-- stat strip -->
+    <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 max-w-3xl border-t border-white/10 pt-8">
+      <div>
+        <p class="font-mono text-2xl md:text-3xl text-safety">03</p>
+        <p class="text-xs md:text-sm text-concrete mt-1">Waterfront facilities</p>
+      </div>
+      <div>
+        <p class="font-mono text-2xl md:text-3xl text-safety">250</p>
+        <p class="text-xs md:text-sm text-concrete mt-1">Hopper barges, 2020</p>
+      </div>
+      <div>
+        <p class="font-mono text-2xl md:text-3xl text-safety">200+</p>
+        <p class="text-xs md:text-sm text-concrete mt-1">Offshore platforms processed</p>
+      </div>
+      <div>
+        <p class="font-mono text-2xl md:text-3xl text-safety">2009</p>
+        <p class="text-xs md:text-sm text-concrete mt-1">Family owned since</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAFETY AWARD BAND (moved from footer to front) ============ -->
+<section class="relative bg-gradient-to-r from-steel to-steel2 border-y border-safety/30">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-8 md:py-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+    <img src="https://www.reliantrecycling.com/hs-fs/hubfs/GBRIA.jpeg?width=300&name=GBRIA.jpeg"
+         alt="2025 GBRIA Safety Excellence Award" class="h-20 md:h-24 w-auto rounded-sm shrink-0 bg-fog p-2">
+    <div class="text-center md:text-left">
+      <p class="eyebrow font-mono text-safety text-xs mb-1">2025 GBRIA SAFETY EXCELLENCE AWARD</p>
+      <p class="font-display text-lg md:text-2xl text-fog leading-snug">
+        Recognized by the Greater Baton Rouge Industrial Alliance for safety leadership &mdash; nominated by our own industrial partners, two years running.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <p class="eyebrow font-mono text-rust text-xs mb-3">WHAT WE HANDLE</p>
+    <h2 class="rust-underline font-display font-semibold text-3xl md:text-5xl pb-4 mb-14 max-w-2xl">Services</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+
+      <a href="#" class="service-card group aspect-[4/5] rounded-sm block focus-visible-ring">
+        <img src="https://www.reliantrecycling.com/hs-fs/hubfs/Reliant%20Roll-Off%20Bin-3.jpeg?width=700&name=Reliant%20Roll-Off%20Bin-3.jpeg" alt="Reliant Recycling roll-off bin on a job site" class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative h-full flex flex-col justify-end p-6">
+          <p class="font-mono text-[10px] text-safety mb-1">01</p>
+          <h3 class="font-display font-semibold text-xl md:text-2xl">Bin Services</h3>
+          <p class="text-sm text-fog/80 mt-1">500+ roll-off containers, no rental or pickup fees.</p>
+        </div>
+      </a>
+
+      <a href="#" class="service-card group aspect-[4/5] rounded-sm block focus-visible-ring">
+        <img src="https://www.reliantrecycling.com/hs-fs/hubfs/Plant.jpg?width=700&name=Plant.jpg" alt="Oilfield platform structure staged for decommissioning" class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative h-full flex flex-col justify-end p-6">
+          <p class="font-mono text-[10px] text-safety mb-1">02</p>
+          <h3 class="font-display font-semibold text-xl md:text-2xl">Oilfield Rig &amp; Platform Decommissioning</h3>
+          <p class="text-sm text-fog/80 mt-1">200+ offshore structures processed since 2014.</p>
+        </div>
+      </a>
+
+      <a href="#" class="service-card group aspect-[4/5] rounded-sm block focus-visible-ring">
+        <img src="https://www.reliantrecycling.com/hs-fs/hubfs/2025%20Barge%20Pic.jpeg?width=700&name=2025%20Barge%20Pic.jpeg" alt="Barge dismantling at a Reliant Recycling waterfront yard" class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative h-full flex flex-col justify-end p-6">
+          <p class="font-mono text-[10px] text-safety mb-1">03</p>
+          <h3 class="font-display font-semibold text-xl md:text-2xl">Barge Dismantling</h3>
+          <p class="text-sm text-fog/80 mt-1">250 hopper barges recycled in 2020 alone.</p>
+        </div>
+      </a>
+
+      <a href="#" class="service-card group aspect-[4/5] rounded-sm block focus-visible-ring">
+        <img src="https://www.reliantrecycling.com/hs-fs/hubfs/ship%20together-1.jpeg?width=700&name=ship%20together-1.jpeg" alt="Vessels staged for ship breaking" class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative h-full flex flex-col justify-end p-6">
+          <p class="font-mono text-[10px] text-safety mb-1">04</p>
+          <h3 class="font-display font-semibold text-xl md:text-2xl">Ship Breaking</h3>
+          <p class="text-sm text-fog/80 mt-1">35 vessels dismantled in our biggest single year.</p>
+        </div>
+      </a>
+
+      <a href="#" class="service-card group aspect-[4/5] rounded-sm block focus-visible-ring">
+        <img src="https://www.reliantrecycling.com/hs-fs/hubfs/yard%20with%20all%20metal-2.jpeg?width=700&name=yard%20with%20all%20metal-2.jpeg" alt="Staged industrial scrap metal at a Reliant Recycling yard" class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative h-full flex flex-col justify-end p-6">
+          <p class="font-mono text-[10px] text-safety mb-1">05</p>
+          <h3 class="font-display font-semibold text-xl md:text-2xl">Industrial Demolition</h3>
+          <p class="text-sm text-fog/80 mt-1">Plant turnarounds and structural teardown.</p>
+        </div>
+      </a>
+
+      <a href="#" class="service-card group aspect-[4/5] rounded-sm block focus-visible-ring">
+        <img src="https://www.reliantrecycling.com/hs-fs/hubfs/BURNERS%20BURNING-1.jpeg?width=700&name=BURNERS%20BURNING-1.jpeg" alt="Crew performing jobsite cleanup and material cutting" class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative h-full flex flex-col justify-end p-6">
+          <p class="font-mono text-[10px] text-safety mb-1">06</p>
+          <h3 class="font-display font-semibold text-xl md:text-2xl">Jobsite Cleanup</h3>
+          <p class="text-sm text-fog/80 mt-1">Construction &amp; industrial site clearing, same-day response.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ MATERIAL INTAKE TICKER (signature element) ============ -->
+<section class="border-y border-safety/20 bg-steel py-5 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 mb-3 flex items-center gap-3">
+    <span class="w-2 h-2 rounded-full bg-safety animate-pulse"></span>
+    <p class="font-mono text-[11px] text-safety tracking-[0.2em]">MATERIALS ACCEPTED &middot; STATE CERTIFIED SCALE</p>
+  </div>
+  <div class="ticker-track font-mono text-sm md:text-base text-concrete whitespace-nowrap">
+    <span class="px-6 py-1">FERROUS</span><span class="text-rust px-2">&bull;</span>
+    <span class="px-4">Turnings</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Pipes</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Platforms</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Vessels</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Caissons</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Plates</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Conductor Pipes</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Valves</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Helidecks</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Boat Landings</span>
+    <span class="px-6 py-1 ml-6">NON-FERROUS</span><span class="text-water px-2">&bull;</span>
+    <span class="px-4">Aluminum</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Brass</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Copper</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Stainless Steel</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Inconel</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Carbide</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Hastelloy</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Monel</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Nickel</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Alloys</span>
+    <!-- duplicate for seamless loop -->
+    <span class="px-6 py-1 ml-6">FERROUS</span><span class="text-rust px-2">&bull;</span>
+    <span class="px-4">Turnings</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Pipes</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Platforms</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Vessels</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Caissons</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Plates</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Conductor Pipes</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Valves</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Helidecks</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Boat Landings</span>
+    <span class="px-6 py-1 ml-6">NON-FERROUS</span><span class="text-water px-2">&bull;</span>
+    <span class="px-4">Aluminum</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Brass</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Copper</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Stainless Steel</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Inconel</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Carbide</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Hastelloy</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Monel</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Nickel</span><span class="text-white/20 px-2">/</span>
+    <span class="px-4">Alloys</span>
+  </div>
+</section>
+
+<!-- ============ THE RELIANT WAY ============ -->
+<section id="way" class="py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-14 items-center">
+    <div>
+      <p class="eyebrow font-mono text-rust text-xs mb-3">HOW WE OPERATE</p>
+      <h2 class="rust-underline font-display font-semibold text-3xl md:text-5xl pb-4 mb-8">The Reliant Way</h2>
+      <p class="text-fog/85 text-base md:text-lg mb-8 max-w-lg">
+        Industry leaders in metal recycling committed to sustainability, efficiency, and safety &mdash; delivering reliable service with a customer-first approach.
+      </p>
+      <ul class="space-y-4">
+        <li class="flex gap-4 items-start">
+          <span class="text-safety font-mono text-sm mt-0.5">&#9632;</span>
+          <span class="text-fog/90">Locally owned and operated since 2009</span>
+        </li>
+        <li class="flex gap-4 items-start">
+          <span class="text-safety font-mono text-sm mt-0.5">&#9632;</span>
+          <span class="text-fog/90">Three waterfront facilities &mdash; Houma, New Orleans, and Dulac</span>
+        </li>
+        <li class="flex gap-4 items-start">
+          <span class="text-safety font-mono text-sm mt-0.5">&#9632;</span>
+          <span class="text-fog/90">Materials weighed on a state certified scale</span>
+        </li>
+        <li class="flex gap-4 items-start">
+          <span class="text-safety font-mono text-sm mt-0.5">&#9632;</span>
+          <span class="text-fog/90">Detailed settlement report on every transaction</span>
+        </li>
+        <li class="flex gap-4 items-start">
+          <span class="text-safety font-mono text-sm mt-0.5">&#9632;</span>
+          <span class="text-fog/90">Prompt payment within 30 days</span>
+        </li>
+        <li class="flex gap-4 items-start">
+          <span class="text-safety font-mono text-sm mt-0.5">&#9632;</span>
+          <span class="text-fog/90">Private trucking fleet for consistent service</span>
+        </li>
+      </ul>
+    </div>
+    <div class="relative">
+      <img src="https://www.reliantrecycling.com/hs-fs/hubfs/More%20material.jpeg?width=900&name=More%20material.jpeg" alt="Staged industrial material at a Reliant Recycling facility" class="rounded-sm w-full aspect-[4/5] object-cover">
+      <div class="absolute -bottom-6 -left-6 bg-steel border border-white/10 rounded-sm px-6 py-5 hidden sm:block max-w-xs">
+        <p class="eyebrow font-mono text-safety text-[10px] mb-2">WHO WE SERVE</p>
+        <p class="text-sm text-fog/90 leading-relaxed">Construction &amp; demolition, chem/petro facilities, fabrication &amp; machine shops, marine repair &amp; shipyards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRACK RECORD / MILESTONES ============ -->
+<section id="history" class="py-20 md:py-28 bg-steel/40">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <p class="eyebrow font-mono text-rust text-xs mb-3">SIXTEEN YEARS ON THE GULF COAST</p>
+    <h2 class="rust-underline font-display font-semibold text-3xl md:text-5xl pb-4 mb-16 max-w-2xl">Track Record</h2>
+
+    <div class="relative pl-8 md:pl-0">
+      <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px timeline-line md:-translate-x-1/2"></div>
+
+      <div class="space-y-12 md:space-y-0">
+
+        <div class="md:grid md:grid-cols-2 md:gap-14 relative">
+          <div class="md:text-right md:pr-14 pb-8 md:pb-24">
+            <p class="font-mono text-safety text-sm mb-1">2009</p>
+            <h3 class="font-display text-xl md:text-2xl mb-2">Founded by Jake Himel</h3>
+            <p class="text-concrete text-sm max-w-sm md:ml-auto">Started with a few 30-foot containers and a handful of machine shop accounts &mdash; built on same-day service.</p>
+          </div>
+          <div></div>
+        </div>
+
+        <div class="md:grid md:grid-cols-2 md:gap-14 relative">
+          <div class="hidden md:block"></div>
+          <div class="md:pl-14 pb-8 md:pb-24">
+            <p class="font-mono text-safety text-sm mb-1">2014</p>
+            <h3 class="font-display text-xl md:text-2xl mb-2">First offshore platform</h3>
+            <p class="text-concrete text-sm max-w-sm">Official entry into offshore decommissioning and rig recycling.</p>
+          </div>
+        </div>
+
+        <div class="md:grid md:grid-cols-2 md:gap-14 relative">
+          <div class="md:text-right md:pr-14 pb-8 md:pb-24">
+            <p class="font-mono text-safety text-sm mb-1">2015</p>
+            <h3 class="font-display text-xl md:text-2xl mb-2">Houma flagship yard</h3>
+            <p class="text-concrete text-sm max-w-sm md:ml-auto">Direct access to the Houma Navigational Canal expanded platform and vessel capacity.</p>
+          </div>
+          <div></div>
+        </div>
+
+        <div class="md:grid md:grid-cols-2 md:gap-14 relative">
+          <div class="hidden md:block"></div>
+          <div class="md:pl-14 pb-8 md:pb-24">
+            <p class="font-mono text-safety text-sm mb-1">2019</p>
+            <h3 class="font-display text-xl md:text-2xl mb-2">35 boats dismantled</h3>
+            <p class="text-concrete text-sm max-w-sm">Commercial vessels, barges, and offshore support craft &mdash; a single-year record.</p>
+          </div>
+        </div>
+
+        <div class="md:grid md:grid-cols-2 md:gap-14 relative">
+          <div class="md:text-right md:pr-14 pb-8 md:pb-24">
+            <p class="font-mono text-safety text-sm mb-1">2020</p>
+            <h3 class="font-display text-xl md:text-2xl mb-2">250 hopper barges</h3>
+            <p class="text-concrete text-sm max-w-sm md:ml-auto">A marine dismantling milestone that put Reliant on the map Gulf-wide.</p>
+          </div>
+          <div></div>
+        </div>
+
+        <div class="md:grid md:grid-cols-2 md:gap-14 relative">
+          <div class="hidden md:block"></div>
+          <div class="md:pl-14 pb-8 md:pb-24">
+            <p class="font-mono text-safety text-sm mb-1">2021</p>
+            <h3 class="font-display text-xl md:text-2xl mb-2">200+ offshore platforms</h3>
+            <p class="text-concrete text-sm max-w-sm">Surpassed 200 structures processed to date across the Gulf.</p>
+          </div>
+        </div>
+
+        <div class="md:grid md:grid-cols-2 md:gap-14 relative">
+          <div class="md:text-right md:pr-14">
+            <p class="font-mono text-safety text-sm mb-1">2023</p>
+            <h3 class="font-display text-xl md:text-2xl mb-2">Elmwood, New Orleans yard</h3>
+            <p class="text-concrete text-sm max-w-sm md:ml-auto">A third waterfront location, deepening reach across Southeast Louisiana.</p>
+          </div>
+          <div></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDER CREDIBILITY ============ -->
+<section class="py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-5 gap-10 items-center">
+    <div class="lg:col-span-2">
+      <img src="https://www.reliantrecycling.com/hs-fs/hubfs/Jake%20in%20the%20Beginning-2.jpeg?width=800&name=Jake%20in%20the%20Beginning-2.jpeg" alt="Jake Himel, founder of Reliant Recycling, early in the business" class="rounded-sm w-full aspect-square object-cover">
+    </div>
+    <div class="lg:col-span-3">
+      <p class="eyebrow font-mono text-rust text-xs mb-3">FAMILY OWNED, GULF COAST BUILT</p>
+      <p class="font-display text-2xl md:text-4xl leading-tight mb-6">
+        &ldquo;If you don't take care of the customer, you don't get the tip.&rdquo;
+      </p>
+      <p class="text-fog/80 text-base leading-relaxed max-w-xl">
+        That's the lesson Jake Himel carried from working valet into building Reliant from a line of credit and a handful of containers. Sixteen years later, it's still why a call for a swap or pickup gets handled the same day &mdash; no excuses.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE / CONTACT ============ -->
+<section id="quote" class="py-20 md:py-28 bg-gradient-to-b from-steel to-ink border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-5 gap-14">
+
+    <div class="lg:col-span-2">
+      <p class="eyebrow font-mono text-rust text-xs mb-3">GET STARTED</p>
+      <h2 class="rust-underline font-display font-semibold text-3xl md:text-5xl pb-4 mb-8">Request a Quote</h2>
+      <p class="text-fog/80 mb-10 max-w-sm">Tell us what you're moving and we'll get back to you the same business day.</p>
+
+      <div class="space-y-6">
+        <div>
+          <p class="eyebrow font-mono text-safety text-[10px] mb-2">HOUMA</p>
+          <p class="text-fog/90 text-sm">Flagship waterfront facility<br>Houma Navigational Canal, LA</p>
+        </div>
+        <div>
+          <p class="eyebrow font-mono text-safety text-[10px] mb-2">ELMWOOD &middot; NEW ORLEANS</p>
+          <p class="text-fog/90 text-sm">Southeast Louisiana industrial hub</p>
+        </div>
+        <div>
+          <p class="eyebrow font-mono text-safety text-[10px] mb-2">DULAC</p>
+          <p class="text-fog/90 text-sm">Waterfront scrap handling, Mississippi River access</p>
+        </div>
+        <div class="pt-4 border-t border-white/10">
+          <a href="tel:+19858512225" class="block font-mono text-lg text-fog hover:text-safety transition focus-visible-ring">(985) 851-2225</a>
+          <a href="mailto:sales@reliantrecycling.com" class="block font-mono text-sm text-concrete hover:text-safety transition mt-1 focus-visible-ring">sales@reliantrecycling.com</a>
+        </div>
+      </div>
+    </div>
+
+    <form id="quote-form" class="lg:col-span-3 bg-steel/60 border border-white/10 rounded-sm p-6 md:p-10" onsubmit="return sendQuote(event)">
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="q-name" class="block text-xs eyebrow font-mono text-concrete mb-2">NAME</label>
+          <input id="q-name" required type="text" class="w-full bg-ink border border-white/15 rounded-sm px-4 py-3 text-fog focus-visible-ring focus:border-rust outline-none">
+        </div>
+        <div>
+          <label for="q-company" class="block text-xs eyebrow font-mono text-concrete mb-2">COMPANY</label>
+          <input id="q-company" type="text" class="w-full bg-ink border border-white/15 rounded-sm px-4 py-3 text-fog focus-visible-ring focus:border-rust outline-none">
+        </div>
+        <div>
+          <label for="q-phone" class="block text-xs eyebrow font-mono text-concrete mb-2">PHONE</label>
+          <input id="q-phone" required type="tel" class="w-full bg-ink border border-white/15 rounded-sm px-4 py-3 text-fog focus-visible-ring focus:border-rust outline-none">
+        </div>
+        <div>
+          <label for="q-material" class="block text-xs eyebrow font-mono text-concrete mb-2">MATERIAL / SERVICE</label>
+          <select id="q-material" class="w-full bg-ink border border-white/15 rounded-sm px-4 py-3 text-fog focus-visible-ring focus:border-rust outline-none">
+            <option>Bin Services</option>
+            <option>Barge Dismantling</option>
+            <option>Ship Breaking</option>
+            <option>Oilfield Rig / Platform Decommissioning</option>
+            <option>Industrial Demolition</option>
+            <option>Jobsite Cleanup</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+      </div>
+      <div class="mt-5">
+        <label for="q-message" class="block text-xs eyebrow font-mono text-concrete mb-2">DETAILS</label>
+        <textarea id="q-message" rows="4" class="w-full bg-ink border border-white/15 rounded-sm px-4 py-3 text-fog focus-visible-ring focus:border-rust outline-none"></textarea>
+      </div>
+      <button type="submit" class="mt-6 bg-rust hover:bg-rustdark transition font-body font-semibold px-8 py-3.5 rounded-sm w-full sm:w-auto focus-visible-ring">
+        Submit Request
+      </button>
+      <p id="q-status" class="text-sm text-safety mt-4 hidden">Thanks &mdash; opening your email client to send this along.</p>
+    </form>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="py-10 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+    <span class="font-display font-semibold text-sm tracking-wide">
+      <span class="text-rust">RELIANT</span> RECYCLING
+    </span>
+    <p class="font-mono text-xs text-concrete">&copy; 2026 Reliant Recycling LLC &middot; Design preview by IN-FLU-ENTIAL LLC</p>
+  </div>
+</footer>
+
+<script>
+  function sendQuote(e) {
+    e.preventDefault();
+    const name = document.getElementById('q-name').value;
+    const company = document.getElementById('q-company').value;
+    const phone = document.getElementById('q-phone').value;
+    const material = document.getElementById('q-material').value;
+    const message = document.getElementById('q-message').value;
+
+    const subject = encodeURIComponent('Quote Request: ' + material);
+    const body = encodeURIComponent(
+      'Name: ' + name + '\n' +
+      'Company: ' + company + '\n' +
+      'Phone: ' + phone + '\n' +
+      'Service: ' + material + '\n\n' +
+      'Details:\n' + message
+    );
+    window.location.href = 'mailto:sales@reliantrecycling.com?subject=' + subject + '&body=' + body;
+
+    document.getElementById('q-status').classList.remove('hidden');
+    return false;
+  }
+</script>
+
+</body>
+</html>
