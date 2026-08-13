@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reliant Recycling | Louisiana's Waterfront Industrial Scrap Partner Since 2009</title>
 <meta name="description" content="Barge dismantling, ship breaking, oilfield rig decommissioning, and industrial scrap recycling from three waterfront facilities in Houma, New Orleans, and Dulac, Louisiana. 2025 GBRIA Safety Excellence Award recipient.">
+<link rel="icon" type="image/jpeg" href="https://www.reliantrecycling.com/hs-fs/hubfs/RElANT%20LOGO-1.jpg?width=64&height=64&name=RElANT%20LOGO-1.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script>
@@ -188,19 +189,19 @@
 
     <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 max-w-3xl border-t border-white/10 pt-8">
       <div>
-        <p class="font-mono text-2xl md:text-3xl text-safety">03</p>
+        <p class="font-mono text-2xl md:text-3xl text-safety stat-num" data-count-to="3" data-pad="2">00</p>
         <p class="text-xs md:text-sm text-concrete mt-1">Waterfront facilities</p>
       </div>
       <div>
-        <p class="font-mono text-2xl md:text-3xl text-safety">250</p>
+        <p class="font-mono text-2xl md:text-3xl text-safety stat-num" data-count-to="250">0</p>
         <p class="text-xs md:text-sm text-concrete mt-1">Hopper barges, 2020</p>
       </div>
       <div>
-        <p class="font-mono text-2xl md:text-3xl text-safety">200+</p>
+        <p class="font-mono text-2xl md:text-3xl text-safety stat-num" data-count-to="200" data-suffix="+">0</p>
         <p class="text-xs md:text-sm text-concrete mt-1">Offshore platforms processed</p>
       </div>
       <div>
-        <p class="font-mono text-2xl md:text-3xl text-safety">2009</p>
+        <p class="font-mono text-2xl md:text-3xl text-safety stat-num" data-count-to="2009">0</p>
         <p class="text-xs md:text-sm text-concrete mt-1">Family owned since</p>
       </div>
     </div>
@@ -637,6 +638,13 @@
   </div>
 </footer>
 
+<!-- ============ DESIGN PREVIEW BADGE ============ -->
+<a href="https://in-flu-ential.com" target="_blank" rel="noopener"
+   class="fixed bottom-4 right-4 z-40 flex items-center gap-2 bg-ink/90 dark:bg-paper/95 backdrop-blur border border-white/10 dark:border-paperLine text-fog dark:text-inkText text-xs font-mono px-3 py-2 rounded-full shadow-lg hover:opacity-90 transition focus-visible-ring">
+  <span class="w-1.5 h-1.5 rounded-full bg-safety"></span>
+  Design Preview &middot; IN-FLU-ENTIAL
+</a>
+
 <script>
   // theme toggle
   var root = document.documentElement;
@@ -680,6 +688,43 @@
     document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
   } else {
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  // stat count-up
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function animateStat(el) {
+    var target = parseInt(el.getAttribute('data-count-to'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var pad = parseInt(el.getAttribute('data-pad'), 10) || 0;
+    function render(v) {
+      var s = String(v);
+      while (s.length < pad) s = '0' + s;
+      el.textContent = s + suffix;
+    }
+    if (reduceMotion) { render(target); return; }
+    var duration = 1400;
+    var start = null;
+    function step(ts) {
+      if (start === null) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      render(Math.round(target * eased));
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window) {
+    var statIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateStat(entry.target);
+          statIo.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('.stat-num').forEach(function (el) { statIo.observe(el); });
+  } else {
+    document.querySelectorAll('.stat-num').forEach(function (el) { animateStat(el); });
   }
 
   function sendQuote(e) {
