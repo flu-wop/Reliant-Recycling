@@ -53,7 +53,7 @@
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  section[id] { scroll-margin-top: 88px; }
+  section[id] { scroll-margin-top: 96px; }
   .eyebrow { letter-spacing: 0.18em; }
   .rust-underline { position: relative; }
   .rust-underline::after {
@@ -75,10 +75,11 @@
   .service-card { position: relative; overflow: hidden; }
   .service-card img { transition: transform 0.6s ease; }
   .service-card:hover img { transform: scale(1.06); }
-  .service-card::after {
-    content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(11,20,32,0.92) 0%, rgba(11,20,32,0.45) 55%, rgba(11,20,32,0.15) 100%);
+  .service-card-caption {
+    background: linear-gradient(to top, rgba(11,20,32,0.97) 0%, rgba(11,20,32,0.88) 45%, rgba(11,20,32,0.55) 75%, transparent 100%);
+  }
+  .service-card-caption h3, .service-card-caption p, .service-card-caption span {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
   }
   .timeline-line { background: linear-gradient(to bottom, transparent, #C1502E 8%, #C1502E 92%, transparent); }
   .focus-visible-ring:focus-visible { outline: 2px solid #C1502E; outline-offset: 3px; }
@@ -103,12 +104,12 @@
 
 <!-- ============ NAV ============ -->
 <header class="fixed top-0 inset-x-0 z-50 bg-paper/90 dark:bg-ink/90 backdrop-blur border-b border-paperLine dark:border-white/10 transition-colors duration-300">
-  <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-between">
-    <a href="#top" class="flex flex-col leading-none focus-visible-ring">
-      <span class="font-display font-semibold text-xl md:text-2xl tracking-wide">
+  <div class="max-w-7xl mx-auto px-4 sm:px-5 md:px-8 py-3 md:py-4 flex items-center justify-between gap-3">
+    <a href="#top" class="flex flex-col leading-none focus-visible-ring shrink-0">
+      <span class="font-display font-semibold text-base sm:text-xl md:text-2xl tracking-wide whitespace-nowrap">
         <span class="text-rust">RELIANT</span> <span class="text-inkText dark:text-fog">RECYCLING</span>
       </span>
-      <span class="font-mono text-[10px] md:text-xs text-mutedLight dark:text-concrete tracking-[0.2em] mt-0.5">LOUISIANA &middot; EST. 2009</span>
+      <span class="hidden sm:block font-mono text-[10px] md:text-xs text-mutedLight dark:text-concrete tracking-[0.2em] mt-1">LOUISIANA &middot; EST. 2009</span>
     </a>
 
     <nav class="hidden lg:flex items-center gap-8 font-body text-sm text-mutedLight dark:text-concrete">
@@ -118,25 +119,25 @@
       <a href="#locations" class="hover:text-rust transition focus-visible-ring">Locations</a>
     </nav>
 
-    <div class="flex items-center gap-3 md:gap-4">
-      <a href="tel:+19858512225" class="hidden sm:block font-mono text-sm hover:text-rust transition focus-visible-ring">(985) 851-2225</a>
+    <div class="flex items-center gap-2 sm:gap-3 md:gap-4 shrink-0">
+      <a href="tel:+19858512225" class="hidden md:block font-mono text-sm hover:text-rust transition focus-visible-ring">(985) 851-2225</a>
 
       <!-- theme toggle -->
       <button id="theme-toggle" type="button" aria-label="Toggle dark mode"
-        class="toggle-track bg-paperPanel2 dark:bg-steel2 border border-paperLine dark:border-white/10 focus-visible-ring">
+        class="toggle-track bg-paperPanel2 dark:bg-steel2 border border-paperLine dark:border-white/10 focus-visible-ring shrink-0">
         <span class="toggle-thumb">
           <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-safetyText hidden dark:hidden" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
           <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-steel hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
         </span>
       </button>
 
-      <a href="#quote" class="bg-rust hover:bg-rustdark transition text-white font-body font-semibold text-sm px-4 md:px-5 py-2.5 rounded-sm focus-visible-ring">
-        Request a Quote
+      <a href="#quote" class="bg-rust hover:bg-rustdark transition text-white font-body font-semibold text-xs sm:text-sm px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 rounded-sm focus-visible-ring whitespace-nowrap">
+        <span class="sm:hidden">Quote</span><span class="hidden sm:inline">Request a Quote</span>
       </a>
 
       <!-- mobile menu button -->
-      <button id="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" class="lg:hidden p-2 -mr-2 focus-visible-ring">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      <button id="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" class="lg:hidden p-1.5 -mr-1 focus-visible-ring shrink-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
       </button>
     </div>
   </div>
@@ -153,7 +154,7 @@
 </header>
 
 <!-- ============ HERO (always dark — the lit display) ============ -->
-<section id="top" class="relative min-h-[92vh] flex items-end pt-24 bg-ink text-fog">
+<section id="top" class="relative min-h-[92vh] flex items-end pt-20 md:pt-28 bg-ink text-fog">
   <div class="absolute inset-0">
     <img src="https://www.reliantrecycling.com/hs-fs/hubfs/2025%20Barge%20Pic.jpeg?width=1900&name=2025%20Barge%20Pic.jpeg"
          alt="Barge dismantling operation at a Reliant Recycling waterfront yard"
@@ -224,55 +225,55 @@
 
       <a href="#" class="service-card group aspect-[4/5] rounded-sm block focus-visible-ring reveal">
         <img src="https://www.reliantrecycling.com/hs-fs/hubfs/Reliant%20Roll-Off%20Bin-3.jpeg?width=700&name=Reliant%20Roll-Off%20Bin-3.jpeg" alt="Reliant Recycling roll-off bin on a job site" class="absolute inset-0 w-full h-full object-cover">
-        <div class="relative h-full flex flex-col justify-end p-6 text-fog">
+        <div class="service-card-caption absolute inset-x-0 bottom-0 pt-16 pb-6 px-6 text-fog">
           <p class="font-mono text-[10px] text-safety mb-1">01</p>
           <h3 class="font-display font-semibold text-xl md:text-2xl">Bin Services</h3>
-          <p class="text-sm text-fog/80 mt-1">500+ roll-off containers, no rental or pickup fees.</p>
+          <p class="text-sm text-fog/90 mt-1">500+ roll-off containers, no rental or pickup fees.</p>
         </div>
       </a>
 
       <a href="#" class="service-card group aspect-[4/5] rounded-sm block focus-visible-ring reveal">
         <img src="https://www.reliantrecycling.com/hs-fs/hubfs/Plant.jpg?width=700&name=Plant.jpg" alt="Oilfield platform structure staged for decommissioning" class="absolute inset-0 w-full h-full object-cover">
-        <div class="relative h-full flex flex-col justify-end p-6 text-fog">
+        <div class="service-card-caption absolute inset-x-0 bottom-0 pt-16 pb-6 px-6 text-fog">
           <p class="font-mono text-[10px] text-safety mb-1">02</p>
           <h3 class="font-display font-semibold text-xl md:text-2xl">Oilfield Rig &amp; Platform Decommissioning</h3>
-          <p class="text-sm text-fog/80 mt-1">200+ offshore structures processed since 2014.</p>
+          <p class="text-sm text-fog/90 mt-1">200+ offshore structures processed since 2014.</p>
         </div>
       </a>
 
       <a href="#" class="service-card group aspect-[4/5] rounded-sm block focus-visible-ring reveal">
         <img src="https://www.reliantrecycling.com/hs-fs/hubfs/2025%20Barge%20Pic.jpeg?width=700&name=2025%20Barge%20Pic.jpeg" alt="Barge dismantling at a Reliant Recycling waterfront yard" class="absolute inset-0 w-full h-full object-cover">
-        <div class="relative h-full flex flex-col justify-end p-6 text-fog">
+        <div class="service-card-caption absolute inset-x-0 bottom-0 pt-16 pb-6 px-6 text-fog">
           <p class="font-mono text-[10px] text-safety mb-1">03</p>
           <h3 class="font-display font-semibold text-xl md:text-2xl">Barge Dismantling</h3>
-          <p class="text-sm text-fog/80 mt-1">250 hopper barges recycled in 2020 alone.</p>
+          <p class="text-sm text-fog/90 mt-1">250 hopper barges recycled in 2020 alone.</p>
         </div>
       </a>
 
       <a href="#" class="service-card group aspect-[4/5] rounded-sm block focus-visible-ring reveal">
         <img src="https://www.reliantrecycling.com/hs-fs/hubfs/ship%20together-1.jpeg?width=700&name=ship%20together-1.jpeg" alt="Vessels staged for ship breaking" class="absolute inset-0 w-full h-full object-cover">
-        <div class="relative h-full flex flex-col justify-end p-6 text-fog">
+        <div class="service-card-caption absolute inset-x-0 bottom-0 pt-16 pb-6 px-6 text-fog">
           <p class="font-mono text-[10px] text-safety mb-1">04</p>
           <h3 class="font-display font-semibold text-xl md:text-2xl">Ship Breaking</h3>
-          <p class="text-sm text-fog/80 mt-1">35 vessels dismantled in our biggest single year.</p>
+          <p class="text-sm text-fog/90 mt-1">35 vessels dismantled in our biggest single year.</p>
         </div>
       </a>
 
       <a href="#" class="service-card group aspect-[4/5] rounded-sm block focus-visible-ring reveal">
         <img src="https://www.reliantrecycling.com/hs-fs/hubfs/yard%20with%20all%20metal-2.jpeg?width=700&name=yard%20with%20all%20metal-2.jpeg" alt="Staged industrial scrap metal at a Reliant Recycling yard" class="absolute inset-0 w-full h-full object-cover">
-        <div class="relative h-full flex flex-col justify-end p-6 text-fog">
+        <div class="service-card-caption absolute inset-x-0 bottom-0 pt-16 pb-6 px-6 text-fog">
           <p class="font-mono text-[10px] text-safety mb-1">05</p>
           <h3 class="font-display font-semibold text-xl md:text-2xl">Industrial Demolition</h3>
-          <p class="text-sm text-fog/80 mt-1">Plant turnarounds and structural teardown.</p>
+          <p class="text-sm text-fog/90 mt-1">Plant turnarounds and structural teardown.</p>
         </div>
       </a>
 
       <a href="#" class="service-card group aspect-[4/5] rounded-sm block focus-visible-ring reveal">
         <img src="https://www.reliantrecycling.com/hs-fs/hubfs/BURNERS%20BURNING-1.jpeg?width=700&name=BURNERS%20BURNING-1.jpeg" alt="Crew performing jobsite cleanup and material cutting" class="absolute inset-0 w-full h-full object-cover">
-        <div class="relative h-full flex flex-col justify-end p-6 text-fog">
+        <div class="service-card-caption absolute inset-x-0 bottom-0 pt-16 pb-6 px-6 text-fog">
           <p class="font-mono text-[10px] text-safety mb-1">06</p>
           <h3 class="font-display font-semibold text-xl md:text-2xl">Jobsite Cleanup</h3>
-          <p class="text-sm text-fog/80 mt-1">Construction &amp; industrial site clearing, same-day response.</p>
+          <p class="text-sm text-fog/90 mt-1">Construction &amp; industrial site clearing, same-day response.</p>
         </div>
       </a>
 
